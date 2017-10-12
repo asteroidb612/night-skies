@@ -180,6 +180,7 @@ html {background-color: black}
           trailer_playing = false;
         }
         else {
+          document.getElementsByClassName("fluid-vids")[0].appendChild(frame);
           trailer.style.display = "block";
           rest.style.display = "none";
           trailer_playing = true;
