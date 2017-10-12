@@ -169,12 +169,14 @@ html {background-color: black}
       <!-- Add Google Maps -->
       <script>
       var trailer_playing = true;
+      var frame = document.getElementsByTagName("iframe")[0];
       var trailer = document.getElementById("auto")
       var rest = document.getElementById("rest")
       function swap() {
         if (trailer_playing) {
           trailer.style.display = "none";
           rest.style.display = "block"
+          frame.parentElement.removeChild(frame);
           trailer_playing = false;
         }
         else {
