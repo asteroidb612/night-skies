@@ -158,6 +158,11 @@ html {background-color: black}
           trailer_playing = true;
         }
       }
+      document.body.addEventListener("keydown", function(event) {
+        if ((event.keyCode == 27) && trailer_playing){
+          swap();
+        }
+      });
       </script>
       <script>
       function myMap() {
