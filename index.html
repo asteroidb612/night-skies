@@ -13,7 +13,7 @@ body {font-family: "Lato", sans-serif}
 .bloody {
       box-shadow: 0 2px 5px 0 rgba(140, 47, 47, 0.6), 0 2px 10px 0 rgba(167, 50, 50, 0.12);
 }
-.bloody-air {box-shadow: 2px 2px 20px 5px rgba(140, 47, 47, 0.6)}
+.bloody-air {box-shadow: 2px 2px 20px 5px rgba(140, 47, 47, 0.6);}
 #rest {
   background-color: white;
   display: none
@@ -34,6 +34,7 @@ html {background-color: black}
       <!-- Navbar -->
       <div class="w3-top bloody">
         <div class="w3-bar w3-black w3-card-2">
+          <h3 id="title" style="display: inline;" class="w3-hide-large w3-hide-medium w3-margin-left">NIGHT SKIES</h3>
           <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
           <a class="w3-bar-item w3-button w3-padding-large w3-hide-small" onclick="swap()">TRAILER</a>
           <a href="#summary" class="w3-bar-item w3-button w3-padding-large w3-hide-small">SUMMARY</a>
@@ -44,9 +45,10 @@ html {background-color: black}
 
       <!-- Navbar on small screens -->
       <div id="navDemo" class="w3-bar-block w3-black w3-hide w3-hide-large w3-hide-medium w3-top" style="margin-top:46px">
-        <a href="#summary" class="w3-bar-item w3-button w3-padding-large">SUMMARY</a>
-        <a href="#cast" class="w3-bar-item w3-button w3-padding-large">CAST AND CREW</a>
-        <a href="#behind" class="w3-bar-item w3-button w3-padding-large">BEHIND THE SCENES</a>
+        <a class="w3-bar-item w3-button w3-padding-large" onclick="swap()">TRAILER</a>
+        <a onclick="myFunction()" href="#summary" class="w3-bar-item w3-button w3-padding-large">SUMMARY</a>
+        <a onclick="myFunction()" href="#cast" class="w3-bar-item w3-button w3-padding-large">CAST AND CREW</a>
+        <a onclick="myFunction()" href="#behind" class="w3-bar-item w3-button w3-padding-large">BEHIND THE SCENES</a>
       </div>
 
       <!-- Page content -->
@@ -54,14 +56,18 @@ html {background-color: black}
 
         <div class="w3-display-container w3-center">
           <img src="assets/sky.png" style="width:100%">
+          <div class="w3-display-topleft w3-container w3-text-white w3-hide-medium w3-hide-large">
+            <h6 id="title" style="display:inline;">A Vampire Revolution in Motown </h6>
+          </div>
           <div class="w3-display-topmiddle w3-container w3-text-white w3-padding-32 w3-hide-small">
             <h1 id="title">NIGHT SKIES</h1>
             <h3 id="title">A Vampire Revolution in Motown </h3>
           </div>
           <div class="w3-display-middle w3-xlarge bloody-air">
-            <button class="w3-button w3-white" onclick="swap()">Watch Trailer</button>
+            <button class="w3-button w3-white w3-hide-small" onclick="swap()">Watch Trailer</button>
           </div>
         </div>
+        <button class="w3-button w3-black w3-hide-large w3-hide-medium" style="width:100%" onclick="swap()">Watch Trailer</button>
 
         <div id="summary" class="w3-container w3-content w3-padding-32" style="max-width:800px">
           <h2 class="w3-wide">SYNOPSIS</h2>
