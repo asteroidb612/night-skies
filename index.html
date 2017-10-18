@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html> -->
 <html>
 <title>Night Skies</title>
 <meta charset="UTF-8">
@@ -6,16 +6,23 @@
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href="https://fonts.googleapis.com/css?family=Alegreya" rel="stylesheet">
 <style>
 body {font-family: "Lato", sans-serif}
 .mySlides {display: none;}
+.bloody {
+      box-shadow: 0 2px 5px 0 rgba(140, 47, 47, 0.6), 0 2px 10px 0 rgba(167, 50, 50, 0.12);
+}
+.bloody-air {box-shadow: 2px 2px 20px 5px rgba(140, 47, 47, 0.6)}
 #rest {
   background-color: white;
-  display: none}
-  html {background-color: black}
-  </style>
+  display: none
+}
+#title {font-family: 'Alegreya', serif;}
+html {background-color: black}
+</style>
   <body>
-    <div id="auto">
+    <div id="auto" >
       <div class="w3-top">
         <div class="w3-bar w3-black w3-card-2">
           <a class="w3-bar-item w3-button w3-animate-opacity" onclick="swap()">X &nbsp; CLOSE</a>
@@ -25,7 +32,7 @@ body {font-family: "Lato", sans-serif}
     </div>
     <div id="rest" class="w3-animate-opacity">
       <!-- Navbar -->
-      <div class="w3-top">
+      <div class="w3-top bloody">
         <div class="w3-bar w3-black w3-card-2">
           <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
           <a class="w3-bar-item w3-button w3-padding-large w3-hide-small" onclick="swap()">TRAILER</a>
@@ -48,16 +55,17 @@ body {font-family: "Lato", sans-serif}
         <div class="w3-display-container w3-center">
           <img src="assets/sky.png" style="width:100%">
           <div class="w3-display-topmiddle w3-container w3-text-white w3-padding-32 w3-hide-small">
-            <h3>NIGHT SKIES</h3>
-            <p><b>A Vampire Revolution in Motown</b></p>
+            <h1 id="title">NIGHT SKIES</h1>
+            <h3 id="title">A Vampire Revolution in Motown </h3>
           </div>
-          <div class="w3-display-middle w3-xlarge">
+          <div class="w3-display-middle w3-xlarge bloody-air">
             <button class="w3-button w3-white" onclick="swap()">Watch Trailer</button>
           </div>
         </div>
 
-        <div id="summary" class="w3-container w3-content w3-padding-64" style="max-width:800px">
+        <div id="summary" class="w3-container w3-content w3-padding-32" style="max-width:800px">
           <h2 class="w3-wide">SYNOPSIS</h2>
+          <hr/>
           <p class="w3-justify">
             The mayor of bankrupt Detroit  is pleased with the safe city she has provided for the residents. Her efforts to rid the city of criminals results in the revitalization of the city and a new renaissance. </p>
             <p>The mayor’s success is due in part to a pact with the Vampire Lord, Dimitri. Dimitri and the Vampire Nation have the mayor’s approval to kill the criminal elements of the city by night. The mayor in exchange provides the vampires police protection during the day against vampire hunters. </p>
@@ -66,20 +74,272 @@ body {font-family: "Lato", sans-serif}
             <p>Mayor Blue and Dimitri come to understand that to save the city and their way of life, they must first save themselves from each other. The two leaders agree to develop a new pact with the understanding, it is in both their political and personal interest to work together. However, lurking in the shadows is a surviving rebel vampire ready to plot revenge.</p>
           </div>
 
-          <section class="w3-container w3-black w3-padding-64" id="cast">
+          <section class="w3-container w3-padding-32 w3-black" id="cast">
             <h2 class="w3-wide">CAST AND CREW</h2>
-            <div class="w3-card-2 w3-quarter">
-              <header class="w3-container">
-                <h3>Aldo Billingslea</h3>
-              </header>
-              <div class="w3-container">
-                <p> Director </p>
-              </div>
-            </div>
+            <hr/>
+            <div class="w3-container" > <h3 class="w3-wide">Cast</h3>
+<div class="w3-card-2 w3-quarter w3-margin cast-card bloody">
+  <header class="w3-container">
+    <h3>Brenda Wooley</h3>
+  </header>
+  <div class="w3-container">
+    <p> Margo</p>
+  </div>
+</div>
+
+<div class="w3-card-2 w3-quarter w3-margin cast-card bloody">
+  <header class="w3-container">
+    <h3>Aldo B.</h3>
+  </header>
+  <div class="w3-container">
+    <p> Mingus</p>
+  </div>
+</div>
+
+<div class="w3-card-2 w3-quarter w3-margin cast-card bloody">
+  <header class="w3-container">
+    <h3>Nikki Green</h3>
+  </header>
+  <div class="w3-container">
+    <p> Samantha</p>
+  </div>
+</div>
+
+<div class="w3-card-2 w3-quarter w3-margin cast-card bloody">
+  <header class="w3-container">
+    <h3>Michael Curry</h3>
+  </header>
+  <div class="w3-container">
+    <p> Parker</p>
+  </div>
+</div>
+
+<div class="w3-card-2 w3-quarter w3-margin cast-card bloody">
+  <header class="w3-container">
+    <h3>Natalie Kelly</h3>
+  </header>
+  <div class="w3-container">
+    <p> Carla</p>
+  </div>
+</div>
+
+<div class="w3-card-2 w3-quarter w3-margin cast-card bloody">
+  <header class="w3-container">
+    <h3>Courtney Land</h3>
+  </header>
+  <div class="w3-container">
+    <p> Luna</p>
+  </div>
+</div>
+
+</div>
+<div class="w3-container" > <h3 class="w3-wide">Crew </h3>
+<div class="w3-card-2 w3-quarter w3-margin cast-card bloody">
+  <header class="w3-container">
+    <h3>Director</h3>
+  </header>
+  <div class="w3-container">
+    <p> Brian "Sham" Green</p>
+  </div>
+</div>
+
+<div class="w3-card-2 w3-quarter w3-margin cast-card bloody">
+  <header class="w3-container">
+    <h3>Producer</h3>
+  </header>
+  <div class="w3-container">
+    <p> Aldo Billingslea</p>
+  </div>
+</div>
+
+<div class="w3-card-2 w3-quarter w3-margin cast-card bloody">
+  <header class="w3-container">
+    <h3>Executive Producer</h3>
+  </header>
+  <div class="w3-container">
+    <p> Wm. Derek Grasty</p>
+  </div>
+</div>
+
+<div class="w3-card-2 w3-quarter w3-margin cast-card bloody">
+  <header class="w3-container">
+    <h3>Writer/Screenplay</h3>
+  </header>
+  <div class="w3-container">
+    <p> Wm. Derek Grasty</p>
+  </div>
+</div>
+
+<div class="w3-card-2 w3-quarter w3-margin cast-card bloody">
+  <header class="w3-container">
+    <h3>1st AD</h3>
+  </header>
+  <div class="w3-container">
+    <p> Jay Raja</p>
+  </div>
+</div>
+
+<div class="w3-card-2 w3-quarter w3-margin cast-card bloody">
+  <header class="w3-container">
+    <h3>Director of Photography</h3>
+  </header>
+  <div class="w3-container">
+    <p> Gavin Murray</p>
+  </div>
+</div>
+
+<div class="w3-card-2 w3-quarter w3-margin cast-card bloody">
+  <header class="w3-container">
+    <h3>1st AC</h3>
+  </header>
+  <div class="w3-container">
+    <p> Ferguson Rogan</p>
+  </div>
+</div>
+
+<div class="w3-card-2 w3-quarter w3-margin cast-card bloody">
+  <header class="w3-container">
+    <h3>2nd AC</h3>
+  </header>
+  <div class="w3-container">
+    <p> Stephen Bartlett</p>
+  </div>
+</div>
+
+<div class="w3-card-2 w3-quarter w3-margin cast-card bloody">
+  <header class="w3-container">
+    <h3>Gaffer</h3>
+  </header>
+  <div class="w3-container">
+    <p> Ryan Nelson</p>
+  </div>
+</div>
+
+<div class="w3-card-2 w3-quarter w3-margin cast-card bloody">
+  <header class="w3-container">
+    <h3>Key Grip</h3>
+  </header>
+  <div class="w3-container">
+    <p> Kat.</p>
+  </div>
+</div>
+
+<div class="w3-card-2 w3-quarter w3-margin cast-card bloody">
+  <header class="w3-container">
+    <h3>Sound Op</h3>
+  </header>
+  <div class="w3-container">
+    <p> Adam Drakewolf</p>
+  </div>
+</div>
+
+<div class="w3-card-2 w3-quarter w3-margin cast-card bloody">
+  <header class="w3-container">
+    <h3>Boom Op</h3>
+  </header>
+  <div class="w3-container">
+    <p> Steven Lagosh</p>
+  </div>
+</div>
+
+<div class="w3-card-2 w3-quarter w3-margin cast-card bloody">
+  <header class="w3-container">
+    <h3>Key MUA</h3>
+  </header>
+  <div class="w3-container">
+    <p> Whittany Robinson</p>
+  </div>
+</div>
+
+<div class="w3-card-2 w3-quarter w3-margin cast-card bloody">
+  <header class="w3-container">
+    <h3>BTS Photography</h3>
+  </header>
+  <div class="w3-container">
+    <p> Nathan Adams</p>
+  </div>
+</div>
+
+<div class="w3-card-2 w3-quarter w3-margin cast-card bloody">
+  <header class="w3-container">
+    <h3>PA 1</h3>
+  </header>
+  <div class="w3-container">
+    <p> Lee Harold</p>
+  </div>
+</div>
+
+<div class="w3-card-2 w3-quarter w3-margin cast-card bloody">
+  <header class="w3-container">
+    <h3>PA 2</h3>
+  </header>
+  <div class="w3-container">
+    <p> Skylar Adams</p>
+  </div>
+</div>
+
+<div class="w3-card-2 w3-quarter w3-margin cast-card bloody">
+  <header class="w3-container">
+    <h3>PA 3</h3>
+  </header>
+  <div class="w3-container">
+    <p> Thomas Ariniello</p>
+  </div>
+</div>
+
+<div class="w3-card-2 w3-quarter w3-margin cast-card bloody">
+  <header class="w3-container">
+    <h3>Editor</h3>
+  </header>
+  <div class="w3-container">
+    <p> Brian Green</p>
+  </div>
+</div>
+
+<div class="w3-card-2 w3-quarter w3-margin cast-card bloody">
+  <header class="w3-container">
+    <h3>Composer 1</h3>
+  </header>
+  <div class="w3-container">
+    <p> Peder B Helland</p>
+  </div>
+</div>
+
+<div class="w3-card-2 w3-quarter w3-margin cast-card bloody">
+  <header class="w3-container">
+    <h3>Composer 2</h3>
+  </header>
+  <div class="w3-container">
+    <p> Vidal Garcia</p>
+  </div>
+</div>
+
+<div class="w3-card-2 w3-quarter w3-margin cast-card bloody">
+  <header class="w3-container">
+    <h3>Composer 3</h3>
+  </header>
+  <div class="w3-container">
+    <p> Derek Thomas</p>
+  </div>
+</div>
+
+<div class="w3-card-2 w3-quarter w3-margin cast-card bloody">
+  <header class="w3-container">
+    <h3>Craft Services</h3>
+  </header>
+  <div class="w3-container">
+    <p> Grasty Family</p>
+  </div>
+</div>
+
+</div>
+
+
           </section>
-          
-          <section class="w3-container w3-padding-64" id="behind">
+
+          <section class="w3-container w3-padding-32" id="behind">
             <h2 class="w3-wide"> BEHIND THE SCENES </h2>
+            <hr/>
             <div class="w3-cell w3-half">
               <img class="mySlides w3-image" src="assets/11.JPG" > </img>
               <img class="mySlides w3-image" src="assets/16.JPG" > </img>
@@ -112,11 +372,14 @@ body {font-family: "Lato", sans-serif}
           <p class="w3-medium">Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
         </footer>
       </div>
+      <script src="https://player.vimeo.com/api/player.js"></script>
       <script>
       var trailer_playing = true;
       var frame = document.getElementsByTagName("iframe")[0];
       var trailer = document.getElementById("auto")
       var rest = document.getElementById("rest")
+      var player = new Vimeo.Player(frame);
+      player.on('ended', swap);
       function swap() {
         if (trailer_playing) {
           trailer.style.display = "none";
