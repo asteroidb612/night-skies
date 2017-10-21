@@ -9,6 +9,9 @@
 <link href="https://fonts.googleapis.com/css?family=Alegreya" rel="stylesheet">
 <style>
 body {font-family: "Lato", sans-serif}
+.arrows {    color: darkred;
+    font-size: 3em;}
+.arrows:hover {background-color: darkred!important;}
 .mySlides {display: none;}
 .bloody {
   box-shadow: 0 2px 5px 0 rgba(140, 47, 47, 0.6), 0 2px 10px 0 rgba(167, 50, 50, 0.12);
@@ -40,6 +43,7 @@ html {background-color: black}
         <a href="#summary" class="w3-bar-item w3-button w3-padding-large w3-hide-small">SUMMARY</a>
         <a href="#cast" class="w3-bar-item w3-button w3-padding-large w3-hide-small">CAST AND CREW</a>
         <a href="#behind" class="w3-bar-item w3-button w3-padding-large w3-hide-small">BEHIND THE SCENES</a>
+        <a href="mailto: vistaworldfilm@gmail.com"class="w3-bar-item w3-button w3-padding-large w3-hide-small">CONTACT</a>
       </div>
     </div>
 
@@ -346,158 +350,168 @@ html {background-color: black}
         <section class="w3-container w3-padding-32 w3-content" id="behind">
           <h2 class="w3-wide"> BEHIND THE SCENES </h2>
           <hr/>
-          <div class="w3-cell w3-half">
+          <div class="w3-display-container">
             <img class="mySlides w3-image" style="display: block" src="assets/11.JPG" > </img>
             <img class="mySlides w3-image" src="assets/16.JPG" > </img>
             <img class="mySlides w3-image" src="assets/20.JPG" > </img>
             <img class="mySlides w3-image" src="assets/mingus.png" > </img>
-            <img class="mySlides w3-image" src="assets/28.JPG" > </img>
             <img class="mySlides w3-image" src="assets/32.JPG" > </img>
             <img class="mySlides w3-image" src="assets/35.JPG" > </img>
             <img class="mySlides w3-image" src="assets/46.JPG" > </img>
             <img class="mySlides w3-image" src="assets/49.JPG" > </img>
             <img class="mySlides w3-image" src="assets/7.JPG"> </img>
+            <button class="arrows w3-button w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+            <button class="arrows w3-button w3-display-right" onclick="plusDivs(+1)">&#10095;</button>
           </div>
-          <div class="w3-mobile w3-cell w3-half">
-            <p class="w3-margin-left"> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-          </div>
-        </section>
+          <!--div class="w3-mobile w3-cell w3-half">
+          <p class="w3-margin-left"> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+        </div-->
+      </section>
 
-        <!-- End Page Content -->
-      </div>
-
-
-      <!-- Footer -->
-      <footer class="w3-container w3-padding-64 w3-center w3-opacity w3-light-grey w3-xlarge">
-        <i class="fa fa-facebook-official w3-hover-opacity"></i>
-        <i class="fa fa-instagram w3-hover-opacity"></i>
-        <i class="fa fa-snapchat w3-hover-opacity"></i>
-        <i class="fa fa-pinterest-p w3-hover-opacity"></i>
-        <i class="fa fa-twitter w3-hover-opacity"></i>
-        <i class="fa fa-linkedin w3-hover-opacity"></i>
-      </footer>
+      <!-- End Page Content -->
     </div>
-    <script src="https://player.vimeo.com/api/player.js"></script>
-    <script>
-    var trailer_playing = true;
-    var frame = document.getElementsByTagName("iframe")[0];
-    var trailer = document.getElementById("auto")
-    var rest = document.getElementById("rest")
-    var player = new Vimeo.Player(frame);
-    player.on('ended', swap);
-    function swap() {
-      if (trailer_playing) {
-        trailer.style.display = "none";
-        rest.style.display = "block"
-        frame.parentElement.removeChild(frame);
-        trailer_playing = false;
-      }
-      else {
-        document.getElementsByClassName("fluid-vids")[0].appendChild(frame);
-        trailer.style.display = "block";
-        rest.style.display = "none";
-        trailer_playing = true;
-      }
-    }
-    document.body.addEventListener("keydown", function(event) {
-      if ((event.keyCode == 27) && trailer_playing){
-        swap();
-      }
-    });
-    </script>
-    <script>
-    // Automatic Slideshow - change image every 4 seconds
-    var myIndex = 0;
-    carousel();
 
-    function carousel() {
-      var i;
-      var x = document.getElementsByClassName("mySlides");
-      for (i = 0; i < x.length; i++) {
-        x[i].style.display = "none";
-      }
-      myIndex++;
-      if (myIndex > x.length) {myIndex = 1}
-      x[myIndex-1].style.display = "block";
-      setTimeout(carousel, 4000);
-    }
 
-    // Used to toggle the menu on small screens when clicking on the menu button
-    function myFunction() {
-      var x = document.getElementById("navDemo");
-      if (x.className.indexOf("w3-show") == -1) {
-        x.className += " w3-show";
-      } else {
-        x.className = x.className.replace(" w3-show", "");
-      }
+    <!-- Footer -->
+  </div>
+  <script src="https://player.vimeo.com/api/player.js"></script>
+  <script>
+  var trailer_playing = true;
+  var frame = document.getElementsByTagName("iframe")[0];
+  var trailer = document.getElementById("auto")
+  var rest = document.getElementById("rest")
+  var player = new Vimeo.Player(frame);
+  player.on('ended', swap);
+  function swap() {
+    if (trailer_playing) {
+      trailer.style.display = "none";
+      rest.style.display = "block"
+      frame.parentElement.removeChild(frame);
+      trailer_playing = false;
     }
+    else {
+      document.getElementsByClassName("fluid-vids")[0].appendChild(frame);
+      trailer.style.display = "block";
+      rest.style.display = "none";
+      trailer_playing = true;
+    }
+  }
+  document.body.addEventListener("keydown", function(event) {
+    if ((event.keyCode == 27) && trailer_playing){
+      swap();
+    }
+  });
+  </script>
+  <script>
+  var slideIndex = 1;
+  showDivs(slideIndex);
 
-    </script>
-    <script>
-    (function ( window, document, undefined ) {
+  function plusDivs(n) {
+    showDivs(slideIndex += n);
+  }
+
+  function showDivs(n) {
+    var i;
+    var x = document.getElementsByClassName("mySlides");
+    if (n > x.length) {slideIndex = 1}
+    if (n < 1) {slideIndex = x.length} ;
+    for (i = 0; i < x.length; i++) {
+      x[i].style.display = "none";
+    }
+    x[slideIndex-1].style.display = "block";
+  }
+  // Automatic Slideshow - change image every 4 seconds
+  //var myIndex = 0;
+  //carousel();
+  //
+  //function carousel() {
+  //  var i;
+  //  var x = document.getElementsByClassName("mySlides");
+  //  for (i = 0; i < x.length; i++) {
+  //    x[i].style.display = "none";
+  //  }
+  //  myIndex++;
+  //  if (myIndex > x.length) {myIndex = 1}
+  //  x[myIndex-1].style.display = "block";
+  //  setTimeout(carousel, 1000);
+  //}
+
+  // Used to toggle the menu on small screens when clicking on the menu button
+  function myFunction() {
+    var x = document.getElementById("navDemo");
+    if (x.className.indexOf("w3-show") == -1) {
+      x.className += " w3-show";
+    } else {
+      x.className = x.className.replace(" w3-show", "");
+    }
+  }
+
+  </script>
+  <script>
+  (function ( window, document, undefined ) {
+
+    /*
+    * Grab all iframes on the page or return
+    */
+    var iframes = document.getElementsByTagName( 'iframe' );
+
+    /*
+    * Loop through the iframes array
+    */
+    for ( var i = 0; i < iframes.length; i++ ) {
+
+      var iframe = iframes[i],
 
       /*
-      * Grab all iframes on the page or return
+      * RegExp, extend this if you need more players
       */
-      var iframes = document.getElementsByTagName( 'iframe' );
+      players = /www.youtube.com|player.vimeo.com/;
 
       /*
-      * Loop through the iframes array
+      * If the RegExp pattern exists within the current iframe
       */
-      for ( var i = 0; i < iframes.length; i++ ) {
-
-        var iframe = iframes[i],
+      if ( iframe.src.search( players ) > 0 ) {
 
         /*
-        * RegExp, extend this if you need more players
+        * Calculate the video ratio based on the iframe's w/h dimensions
         */
-        players = /www.youtube.com|player.vimeo.com/;
+        var videoRatio        = ( iframe.height / iframe.width ) * 100;
 
         /*
-        * If the RegExp pattern exists within the current iframe
+        * Replace the iframe's dimensions and position
+        * the iframe absolute, this is the trick to emulate
+        * the video ratio
         */
-        if ( iframe.src.search( players ) > 0 ) {
+        iframe.style.position = 'absolute';
+        iframe.style.bottom   = '0';
+        iframe.style.left     = '0';
+        iframe.width          = '100%';
+        iframe.height         = '100%';
 
-          /*
-          * Calculate the video ratio based on the iframe's w/h dimensions
-          */
-          var videoRatio        = ( iframe.height / iframe.width ) * 100;
+        /*
+        * Wrap the iframe in a new <div> which uses a
+        * dynamically fetched padding-top property based
+        * on the video's w/h dimensions
+        */
+        var wrap              = document.createElement( 'div' );
+        wrap.className        = 'fluid-vids';
+        wrap.style.width      = '100%';
+        wrap.style.position   = 'relative';
+        wrap.style.paddingTop = videoRatio + '%';
 
-          /*
-          * Replace the iframe's dimensions and position
-          * the iframe absolute, this is the trick to emulate
-          * the video ratio
-          */
-          iframe.style.position = 'absolute';
-          iframe.style.bottom   = '0';
-          iframe.style.left     = '0';
-          iframe.width          = '100%';
-          iframe.height         = '100%';
-
-          /*
-          * Wrap the iframe in a new <div> which uses a
-          * dynamically fetched padding-top property based
-          * on the video's w/h dimensions
-          */
-          var wrap              = document.createElement( 'div' );
-          wrap.className        = 'fluid-vids';
-          wrap.style.width      = '100%';
-          wrap.style.position   = 'relative';
-          wrap.style.paddingTop = videoRatio + '%';
-
-          /*
-          * Add the iframe inside our newly created <div>
-          */
-          var iframeParent      = iframe.parentNode;
-          iframeParent.insertBefore( wrap, iframe );
-          wrap.appendChild( iframe );
-
-        }
+        /*
+        * Add the iframe inside our newly created <div>
+        */
+        var iframeParent      = iframe.parentNode;
+        iframeParent.insertBefore( wrap, iframe );
+        wrap.appendChild( iframe );
 
       }
 
-    })( window, document );
-    </script>
+    }
 
-  </body>
+  })( window, document );
+  </script>
+
+</body>
 </html>
